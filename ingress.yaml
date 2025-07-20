@@ -12,8 +12,9 @@ metadata:
     gethomepage.dev/icon: homepage.png
     gethomepage.dev/name: Homepage
 spec:
+  ingressClassName: tailscale
   rules:
-    - host: "homepage.tailbd862.ts.net"
+    - host: homepage
       http:
         paths:
           - path: "/"
@@ -23,3 +24,7 @@ spec:
                 name: homepage
                 port:
                   number: 3000
+  tls:
+    - hosts:
+        - homepage
+      secretName: tls-homepage-ingress

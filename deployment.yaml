@@ -28,7 +28,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: HOMEPAGE_ALLOWED_HOSTS
-              value: homepage.tailbbd862.ts.net
+              value: homepage.tailbd862.ts.net, homepage
           ports:
             - name: http
               containerPort: 3000
